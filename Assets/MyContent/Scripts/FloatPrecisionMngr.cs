@@ -16,6 +16,11 @@ public class FloatPrecisionMngr : Singleton<FloatPrecisionMngr>
 
     public void Add(GameObject obj, Vector3 startPos)
     {
+        if (obj == null)
+        {
+            return;
+        }
+
         objectsToMove.Add(obj);
         objectsToMoveStartPosition.Add(startPos);
     }
